@@ -1,0 +1,457 @@
+/* Emerald Essence Color Palette */
+:root {
+    --deep-forest: #0D2B1D;
+    --forest-green: #345635;
+    --sage-green: #6B8F71;
+    --soft-sage: #AEC3B0;
+    --light-mint: #E3EFD3;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--deep-forest);
+    background-color: var(--light-mint);
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--deep-forest);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--light-mint);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--light-mint);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--soft-sage);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-mint);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Generator Header */
+.generator-header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.generator-header h1 {
+    font-size: 2.5rem;
+    color: var(--deep-forest);
+    margin-bottom: 0.5rem;
+}
+
+.generator-header p {
+    font-size: 1.2rem;
+    color: var(--sage-green);
+}
+
+/* Generator Container */
+.generator-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.preferences-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.preferences-section h2 {
+    color: var(--deep-forest);
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--deep-forest);
+    font-weight: bold;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--soft-sage);
+    border-radius: 5px;
+    background-color: var(--light-mint);
+    color: var(--deep-forest);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--forest-green);
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--forest-green);
+    color: var(--light-mint);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.generate-btn:hover {
+    background-color: var(--sage-green);
+}
+
+/* Result Section */
+.result-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-placeholder {
+    text-align: center;
+    color: var(--sage-green);
+    padding: 3rem;
+}
+
+.result-content {
+    width: 100%;
+}
+
+.destination-card-large {
+    background-color: var(--light-mint);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.card-image-large {
+    width: 100%;
+    height: 300px;
+    background-color: var(--sage-green);
+}
+
+.card-info-large {
+    padding: 2rem;
+}
+
+.card-info-large h2 {
+    color: var(--deep-forest);
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.destination-country {
+    color: var(--sage-green);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.destination-description {
+    color: var(--forest-green);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.destination-details {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.destination-details p {
+    margin-bottom: 0.5rem;
+    color: var(--deep-forest);
+}
+
+.destination-details strong {
+    color: var(--forest-green);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.surprise-btn,
+.wishlist-btn {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.surprise-btn {
+    background-color: var(--forest-green);
+    color: var(--light-mint);
+}
+
+.surprise-btn:hover {
+    background-color: var(--sage-green);
+    transform: scale(1.05);
+}
+
+.wishlist-btn {
+    background-color: var(--soft-sage);
+    color: var(--deep-forest);
+}
+
+.wishlist-btn:hover {
+    background-color: var(--sage-green);
+    color: var(--light-mint);
+    transform: scale(1.05);
+}
+
+/* Wishlist Section */
+.wishlist-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.wishlist-section h2 {
+    color: var(--deep-forest);
+    margin-bottom: 1.5rem;
+}
+
+#wishlistContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.empty-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--sage-green);
+    padding: 2rem;
+}
+
+.wishlist-item {
+    background-color: var(--light-mint);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--forest-green);
+    position: relative;
+}
+
+.wishlist-item h4 {
+    color: var(--deep-forest);
+    margin-bottom: 0.5rem;
+}
+
+.wishlist-item p {
+    color: var(--sage-green);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--sage-green);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.remove-btn:hover {
+    color: var(--deep-forest);
+}
+
+/* Footer */
+footer {
+    background-color: var(--deep-forest);
+    color: var(--light-mint);
+    margin-top: 4rem;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links h3,
+.newsletter h3 {
+    margin-bottom: 1rem;
+    color: var(--soft-sage);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--light-mint);
+    text-decoration: none;
+    line-height: 2;
+}
+
+.footer-links a:hover {
+    color: var(--soft-sage);
+}
+
+.newsletter form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--light-mint);
+    color: var(--deep-forest);
+}
+
+.newsletter button {
+    padding: 0.7rem 1.5rem;
+    background-color: var(--forest-green);
+    color: var(--light-mint);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: var(--sage-green);
+}
+
+#subscribeMessage {
+    font-size: 0.9rem;
+    color: var(--soft-sage);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--forest-green);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--deep-forest);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .generator-container {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    #wishlistContainer {
+        grid-template-columns: 1fr;
+    }
+}

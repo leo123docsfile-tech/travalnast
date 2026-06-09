@@ -1,0 +1,346 @@
+/* Emerald Essence Color Palette */
+:root {
+    --deep-forest: #0D2B1D;
+    --forest-green: #345635;
+    --sage-green: #6B8F71;
+    --soft-sage: #AEC3B0;
+    --light-mint: #E3EFD3;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--deep-forest);
+    background-color: var(--light-mint);
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--deep-forest);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--light-mint);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--light-mint);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--soft-sage);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-mint);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Explorer Header */
+.explorer-header {
+    text-align: center;
+    padding: 11rem 0;
+}
+
+.explorer-header h1 {
+    font-size: 2.5rem;
+    color: var(--deep-forest);
+    margin-bottom: 0.5rem;
+}
+
+.explorer-header p {
+    font-size: 1.2rem;
+    color: var(--sage-green);
+}
+
+/* Filter Section */
+.filter-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.filters {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 250px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--deep-forest);
+    font-weight: bold;
+}
+
+.filter-group select,
+.filter-group input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 2px solid var(--soft-sage);
+    border-radius: 5px;
+    background-color: var(--light-mint);
+    color: var(--deep-forest);
+    font-size: 1rem;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+    outline: none;
+    border-color: var(--forest-green);
+}
+
+/* Destinations Grid */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.destination-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(13, 43, 29, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background-color: var(--sage-green);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: var(--deep-forest);
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    color: var(--sage-green);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 43, 29, 0.8);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close {
+    color: var(--sage-green);
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: var(--deep-forest);
+}
+
+#modalTitle {
+    color: var(--deep-forest);
+    margin-bottom: 1rem;
+}
+
+.modal-description {
+    color: var(--forest-green);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.modal-attractions h3,
+.modal-costs h3 {
+    color: var(--deep-forest);
+    margin-bottom: 1rem;
+}
+
+.modal-attractions ul {
+    list-style-position: inside;
+    color: var(--sage-green);
+    margin-bottom: 1.5rem;
+}
+
+.modal-attractions li {
+    margin-bottom: 0.5rem;
+}
+
+.cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.cost-table th,
+.cost-table td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid var(--soft-sage);
+}
+
+.cost-table th {
+    background-color: var(--forest-green);
+    color: var(--light-mint);
+}
+
+.cost-table tr:hover {
+    background-color: var(--light-mint);
+}
+
+/* Footer */
+footer {
+    background-color: var(--deep-forest);
+    color: var(--light-mint);
+    margin-top: 4rem;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    
+}
+
+.footer-links h3 {
+    margin-bottom: 1rem;
+    color: var(--soft-sage);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--light-mint);
+    text-decoration: none;
+    line-height: 2;
+}
+
+.footer-links a:hover {
+    color: var(--soft-sage);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--forest-green);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--deep-forest);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+}

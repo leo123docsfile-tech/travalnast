@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore amazing travel destinations">
+    <title>Destination Explorer - TravelNest</title>
+    <link rel="stylesheet" href="css/explorer.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">TravelNest</div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Explore</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="explorer-header">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Explore destinations from around the world</p>
+        </section>
+
+        <section class="filter-section">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="continentFilter">Filter by Continent:</label>
+                    <select id="continentFilter">
+                        <option value="all">All Continents</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Americas">Americas</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="searchInput">Search Destination:</label>
+                    <input type="text" id="searchInput" placeholder="Type destination name...">
+                </div>
+            </div>
+        </section>
+
+        <section class="destinations-grid" id="destinationsGrid">
+            <!-- Destination cards will be loaded here by JavaScript -->
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="destinationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Destination Name</h2>
+            <div id="modalBody">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explorer.html">Destinations</a></li>
+                    <li><a href="feedback.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/ham_mobile.js"></script>
+    <script src="js/explorer.js"></script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+Volume Control
+.volume-control {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: var(--light-mint);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.volume-control label {
+    color: var(--deep-forest);
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.volume-control input[type="range"] {
+    width: 200px;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.volume-control #volumeValue {
+    color: var(--forest-green);
+    font-weight: bold;
+    min-width: 50px;
+    display: inline-block;
+}
+
+/* Playing Button State */
+.sound-toggle.playing {
+    background-color: var(--deep-forest);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}

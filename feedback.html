@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact us and get support">
+    <title>Feedback & Support - TravelNest</title>
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">TravelNest</div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Explore</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="feedback-header">
+            <h1>Feedback & Support</h1>
+            <p>We would love to hear from you! Share your thoughts or get help.</p>
+        </section>
+
+        <section class="content-container">
+            <div class="form-section">
+                <h2>Send Us Your Feedback</h2>
+                <p class="form-description">Your feedback helps us improve TravelNest for everyone</p>
+                
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="userName">Your Name *</label>
+                        <input type="text" id="userName" required placeholder="Enter your full name" autocomplete="name">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userEmail">Email Address *</label>
+                        <input type="email" id="userEmail" required placeholder="Enter your email" autocomplete="email">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackType">Feedback Type</label>
+                        <select id="feedbackType">
+                            <option value="general">General Feedback</option>
+                            <option value="bug">Report a Bug</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="support">Support Request</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userMessage">Your Message *</label>
+                        <textarea id="userMessage" rows="6" required placeholder="Tell us what's on your mind..."></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Feedback</button>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <p>✓ Thank you! Your feedback has been submitted successfully.</p>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@travelnest.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">🕒</span>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submitted-feedback">
+                    <h3>Recent Submissions</h3>
+                    <div id="feedbackList">
+                        <p class="empty-message">No feedback submitted yet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I plan a trip using TravelNest?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Start by exploring destinations on our Destination Explorer page. Then use the Budget Planner to calculate costs, and try our Random Trip Generator for inspiration. You can track your plans on the Travel Mood page.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is TravelNest free to use?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! TravelNest is completely free to use. All features including destination exploration, budget planning, and trip generation are available at no cost.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How does the Budget Planner work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Enter your destination, number of days, and daily budget. Our calculator will show your total trip cost and budget status (low, moderate, or luxury). You can save multiple budgets for comparison.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I save my favorite destinations?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! Use the Random Trip Generator to create a wishlist, or track destinations as visited or planned on the Travel Mood page. All data is saved locally on your device.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are the ambient sounds for?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The Travel Mood page offers ambient sounds like beach waves, forest, city, and rain. These sounds help you relax and imagine yourself in different travel destinations while planning your trips.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I contact support?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can reach us through the feedback form on this page, email us at support@travelnest.com, or call us during business hours at +1 (555) 123-4567.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explorer.html">Destinations</a></li>
+                    <li><a href="feedback.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" id="emailInput" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="subscribeMessage"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/ham_mobile.js"></script>
+    <script src="js/feedback.js"></script>
+</body>
+</html>

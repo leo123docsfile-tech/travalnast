@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Set your travel mood and track destinations">
+    <title>Travel Mood - TravelNest</title>
+    <link rel="stylesheet" href="css/mood.css">
+    <link rel="stylesheet" href="css/volume_control.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">TravelNest</div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Explore</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mood-header">
+            <h1>Travel Mood</h1>
+            <p>Immerse yourself in ambient travel sounds and track your journey</p>
+        </section>
+
+        <section class="ambient-sounds">
+            <h2>Ambient Travel Sounds</h2>
+            <p class="section-description">Close your eyes and transport yourself to your dream destination</p>
+            <div class="sounds-grid">
+                <div class="sound-card">
+                    <div class="sound-icon beach-icon">🏖️</div>
+                    <h3>Beach Waves</h3>
+                    <p>Relaxing ocean sounds</p>
+                    <button class="sound-toggle" data-sound="beach">Play</button>
+                </div>
+
+                <div class="sound-card">
+                    <div class="sound-icon forest-icon">🌲</div>
+                    <h3>Forest Ambience</h3>
+                    <p>Birds chirping and rustling leaves</p>
+                    <button class="sound-toggle" data-sound="forest">Play</button>
+                </div>
+
+                <div class="sound-card">
+                    <div class="sound-icon city-icon">🏙️</div>
+                    <h3>City Streets</h3>
+                    <p>Urban atmosphere and life</p>
+                    <button class="sound-toggle" data-sound="city">Play</button>
+                </div>
+
+                <div class="sound-card">
+                    <div class="sound-icon rain-icon">🌧️</div>
+                    <h3>Rainfall</h3>
+                    <p>Gentle rain sounds</p>
+                    <button class="sound-toggle" data-sound="rain">Play</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="destination-tracker">
+            <h2>Destination Tracker</h2>
+            <p class="section-description">Keep track of places you've visited and plan to visit</p>
+            
+            <div class="tracker-container">
+                <div class="add-destination-form">
+                    <h3>Add New Destination</h3>
+                    <form id="destinationForm">
+                        <div class="form-group">
+                            <label for="destinationName">Destination Name</label>
+                            <input type="text" id="destinationName" required placeholder="e.g., Paris">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destinationCountry">Country</label>
+                            <input type="text" id="destinationCountry" required placeholder="e.g., France">
+                        </div>
+
+                        <div class="form-group">
+                            <p class="form-label"></p>Status</p>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="status" value="visited" required>
+                                    <span>Visited</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="status" value="planned" required>
+                                    <span>Planned</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="add-btn">Add Destination</button>
+                    </form>
+                </div>
+
+                <div class="destinations-display">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="visited">Visited</button>
+                        <button class="tab-btn" data-tab="planned">Planned</button>
+                        <button class="tab-btn" data-tab="all">All</button>
+                    </div>
+
+                    <div class="destinations-list" id="destinationsList">
+                        <p class="empty-state">No destinations yet. Add your first one above!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2>Your Travel Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="visitedCount">0</div>
+                    <div class="stat-label">Places Visited</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="plannedCount">0</div>
+                    <div class="stat-label">Places Planned</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalCount">0</div>
+                    <div class="stat-label">Total Destinations</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explorer.html">Destinations</a></li>
+                    <li><a href="feedback.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" id="emailInput" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="subscribeMessage"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/ham_mobile.js"></script>
+    <script src="js/mood.js"></script>
+     
+
+
+
+
+    
+</body>
+</html> 

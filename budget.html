@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan your trip budget effectively">
+    <title>Budget Planner - TravelNest</title>
+    <link rel="stylesheet" href="css/budget.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">TravelNest</div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Explore</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="budget-header">
+            <h1>Trip Budget Planner</h1>
+            <p>Calculate your travel expenses and plan wisely</p>
+        </section>
+
+        <section class="budget-container">
+            <div class="budget-form-section">
+                <h2>Enter Your Trip Details</h2>
+                <form id="budgetForm">
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" required placeholder="e.g., Paris, France">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="days">Number of Days</label>
+                        <input type="number" id="days" min="1" required placeholder="e.g., 7">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dailyBudget">Daily Budget ($)</label>
+                        <input type="number" id="dailyBudget" min="1" required placeholder="e.g., 150">
+                    </div>
+
+                    <button type="submit" class="calculate-btn">Calculate Budget</button>
+                </form>
+            </div>
+
+            <div class="budget-result-section" id="resultSection">
+                <h2>Your Budget Summary</h2>
+                <div class="result-card">
+                    <div class="result-item">
+                        <h3>Total Trip Cost</h3>
+                        <p class="total-cost" id="totalCost">$0</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>Budget Status</h3>
+                        <p class="budget-status" id="budgetStatus">-</p>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <button class="save-btn" id="saveBudget">Save This Budget</button>
+            </div>
+        </section>
+
+        <section class="saved-budgets">
+            <h2>Saved Budgets</h2>
+            <div id="savedBudgetsList">
+                <p>No saved budgets yet. Create your first budget above!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explorer.html">Destinations</a></li>
+                    <li><a href="feedback.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/ham_mobile.js"></script>
+    <script src="js/budget.js"></script>
+</body>
+</html>

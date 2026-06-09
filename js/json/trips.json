@@ -1,0 +1,178 @@
+{
+    "adventure": {
+        "low": [
+            {
+                "name": "Yala WildLife Camping",
+                "country": "Sri Lanka",
+                "image": "/assets/image/trips/yalacamping.jpg",
+                "description": "Camping in Yala means staying in the wild with safari and camfires"
+            },
+            {
+                "name": "Backpacking Thailand",
+                "country": "Thailand",
+                "image": "/assets/image/trips/Backpacking_Thailand.jpg",
+                "description": "Explore beaches, temples, and vibrant street food scenes affordably."
+            }
+        ],
+        "medium": [
+            {
+                "name": "Safari in Kenya",
+                "country": "Kenya",
+                "image": "/assets/image/trips/Safari in Kenya.jpg",
+                "description": "Experience wildlife in their natural habitat with comfortable accommodations."
+            },
+            {
+                "name": "Zip-lining Costa Rica",
+                "country": "Costa Rica",
+                "image": "/assets/image/trips/Zip-lining Costa Rica.jpg",
+                "description": "Adventure through rainforests with exciting canopy tours."
+            }
+        ],
+        "high": [
+            {
+                "name": "Antarctica Expedition",
+                "country": "Antarctica",
+                "image": "/assets/image/trips/Antarctica Expedition.jpg",
+                "description": "Luxury cruise to the world's most remote continent with expert guides."
+            },
+            {
+                "name": "Mount Everest Base Camp",
+                "country": "Nepal",
+                "image": "/assets/image/trips/Mount Everest Base Camp.jpg",
+                "description": "Premium guided trek with comfortable lodges and helicopter return."
+            }
+        ]
+    },
+    "relaxation": {
+        "low": [
+            {
+                "name": "Goa Beaches",
+                "country": "India",
+                "image": "/assets/image/trips/Goa Beaches.jpg",
+                "description": "Relax on beautiful beaches with affordable accommodations and yoga retreats."
+            },
+            {
+                "name": "Bali Budget Retreat",
+                "country": "Indonesia",
+                "image": "/assets/image/trips/Bali Budget Retreat.jpg",
+                "description": "Peaceful rice terraces, temples, and beach relaxation without breaking the bank."
+            }
+        ],
+        "medium": [
+            {
+                "name": "Unawatuna Beach",
+                "country": "Sri Lanka",
+                "image": "/assets/image/trips/unwatuna.jpg",
+                "description": "Unawatuna is a calm beach place with clear water ans relazing vibes"
+            },
+            {
+                "name": "Greek Islands",
+                "country": "Greece",
+                "image": "/assets/image/trips/Greek Islands.jpg",
+                "description": "Island hopping with beautiful beaches, white-washed villages, and delicious food."
+            }
+        ],
+        "high": [
+            {
+                "name": "Bora Bora Luxury",
+                "country": "French Polynesia",
+                "image": "/assets/image/trips/Bora Bora Luxury.jpg",
+                "description": "Ultimate luxury overwater villas with private pools and world-class service."
+            },
+            {
+                "name": "Seychelles Private Island",
+                "country": "Seychelles",
+                "image": "/assets/image/trips/Seychelles Private Island.jpg",
+                "description": "Exclusive private island resort with pristine beaches and gourmet dining."
+            }
+        ]
+    },
+    "cultural": {
+        "low": [
+            {
+                "name": "Exploring Morocco",
+                "country": "Morocco",
+                "image": "/assets/image/trips/Exploring Morocco.jpg",
+                "description": "Discover ancient medinas, colorful markets, and rich history affordably."
+            },
+            {
+                "name": "Vietnam Heritage Tour",
+                "country": "Vietnam",
+                "image": "/assets/image/trips/Vietnam Heritage Tour.jpg",
+                "description": "Experience ancient temples, colonial architecture, and vibrant street culture."
+            }
+        ],
+        "medium": [
+            {
+                "name": "Japan Cultural Tour",
+                "country": "Japan",
+                "image": "/assets/image/trips/Japan Cultural Tour.jpg",
+                "description": "Visit temples, experience tea ceremonies, and explore traditional neighborhoods."
+            },
+            {
+                "name": "Peru Machu Picchu",
+                "country": "Peru",
+                "image": "/assets/image/trips/Peru Machu Picchu.jpg",
+                "description": "Discover Inca ruins, colonial cities, and Andean culture."
+            }
+        ],
+        "high": [
+            {
+                "name": "Sigiriya",
+                "country": "Sri Lanka",
+                "image": "/assets/image/trips/sigiriya.jpg",
+                "description": "An ancient rock fortress with garden and paintings, famous for its history and amazing views."
+            },
+            {
+                "name": "Italy Art Tour",
+                "country": "Italy",
+                "image": "/assets/image/trips/Italy Art Tour.jpg",
+                "description": "Private guided tours of Vatican, Florence's museums, and Venice's palaces."
+            }
+        ]
+    },
+    "nature": {
+        "low": [
+            {
+                "name": "Camping Patagonia",
+                "country": "Argentina",
+                "image": "/assets/image/trips/Camping Patagonia.jpg",
+                "description": "Stunning glaciers and mountains with budget camping and hiking."
+            },
+            {
+                "name": "Iceland Ring Road",
+                "country": "Iceland",
+                "image": "/assets/image/trips/Iceland Ring Road.jpg",
+                "description": "Road trip seeing waterfalls, geysers, and northern lights on a budget."
+            }
+        ],
+        "medium": [
+            {
+                "name": "Hortain Plains National Park",
+                "country": "Sri Lanka",
+                "image": "/assets/image/trips/hortainplains.jpg",
+                "description": "Explore the one of the most beautiful and cool park with clifs and hiking paths."
+            },
+            {
+                "name": "New Zealand Nature",
+                "country": "New Zealand",
+                "image": "/assets/image/trips/New Zealand Nature.jpg",
+                "description": "Fjords, mountains, and pristine lakes with comfortable lodging."
+            }
+        ],
+        "high": [
+            {
+                "name": "Galapagos Islands",
+                "country": "Ecuador",
+                "image": "/assets/image/trips/Galapagos Islands.jpg",
+                "description": "Luxury yacht cruise exploring unique wildlife with naturalist guides."
+            },
+            {
+                "name": "Alaska Wilderness",
+                "country": "USA",
+                "image": "/assets/image/trips/Alaska Wilderness.jpg",
+                "description": "Premium lodge experience with bear watching, glacier tours, and fishing."
+            }
+        ]
+    }
+}

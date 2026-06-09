@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelNest - Your ultimate travel planning companion">
+    <title>TravelNest - Home</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>    
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">TravelNest</div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Explore</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 id="travelQuote">Welcome to TravelNest</h1>
+                    <p>Your journey begins here. Explore destinations, plan trips, and create unforgettable memories.</p>
+                    <a href="explorer.html" class="cta-button">Start Exploring</a>
+                </div>
+                <div class="hero-image" id="heroImage">
+                    <!-- Image will be dynamically set via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="destination-day">
+            <h2>Destination of the Day</h2>
+            <div class="featured-destination" id="featuredDestination">
+                <div class="featured-image" id="featuredImage">
+                    <!-- Image will be dynamically set via JavaScript -->
+                </div>
+                <div class="featured-info">
+                    <h3 id="destName">Loading...</h3>
+                    <p id="destCountry">Discovering today's destination...</p>
+                    <a href="explorer.html" class="explore-btn">Explore More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explorer.html">Destinations</a></li>
+                    <li><a href="feedback.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" id="emailInput" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="subscribeMessage"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/ham_mobile.js"></script>
+</body>
+</html>

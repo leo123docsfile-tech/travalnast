@@ -1,0 +1,28 @@
+/* Replace variables with actual values for validation only */
+
+.volume-control {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #E3EFD3; /* Instead of var(--light-mint) */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.volume-control label {
+    color: #0D2B1D; /* Instead of var(--deep-forest) */
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.volume-control #volumeValue {
+    color: #345635; /* Instead of var(--forest-green) */
+    font-weight: bold;
+    min-width: 50px;
+    display: inline-block;
+}
+
+.sound-toggle.playing {
+    background-color: #0D2B1D; /* Instead of var(--deep-forest) */
+    animation: pulse 2s infinite;
+}

@@ -1,0 +1,174 @@
+[
+    {
+        "name": "Paris",
+        "country": "France",
+        "continent": "Europe",
+        "image": "assets/image/destinations/Eiffel-Tower-Paris-1193383536.jpg",
+        "description": "The City of Light is known for its Art, Fashion, Gastronomy and Culture. Visit the Eiffel Tower, Louvre Museum, and enjoy French cuisine.",
+        "attractions": [
+            "Eiffel Tower",
+            "Louvre Museum",
+            "Notre-Dame Cathedral",
+            "Arc de Triomphe",
+            "Champs-Élysées"
+        ],
+        "costs": {
+            "accommodation": "$100-200 per night",
+            "food": "$30-50 per day",
+            "transport": "$15-25 per day"
+        }
+    },
+    {
+        "name": "Tokyo",
+        "country": "Japan",
+        "continent": "Asia",
+        "image": "assets/image/destinations/tokyo_image.jpg",
+        "description": "A bustling metropolis blending ultra modern with traditional. Experience ancient temples, cutting edge technology, and amazing food.",
+        "attractions": [
+            "Senso-ji Temple",
+            "Tokyo Skytree",
+            "Shibuya Crossing",
+            "Mount Fuji",
+            "Imperial Palace"
+        ],
+        "costs": {
+            "accommodation": "$80-150 per night",
+            "food": "$25-40 per day",
+            "transport": "$10-20 per day"
+        }
+    },
+    {
+        "name": "New York",
+        "country": "USA",
+        "continent": "Americas",
+        "image": "assets/image/destinations/newyork_image.jpg",
+        "description": "The city that never sleeps offers world class museums, iconic landmarks, Broadway shows, and diverse cuisines from around the world.",
+        "attractions": [
+            "Statue of Liberty",
+            "Central Park",
+            "Times Square",
+            "Empire State Building",
+            "Brooklyn Bridge"
+        ],
+        "costs": {
+            "accommodation": "$120-250 per night",
+            "food": "$40-60 per day",
+            "transport": "$15-30 per day"
+        }
+    },
+    {
+        "name": "Dubai",
+        "country": "UAE",
+        "continent": "Asia",
+        "image": "assets/image/destinations/dubai_image.jpg",
+        "description": "A modern oasis in the desert with luxury shopping, ultramodern architecture, and a lively nightlife scene.",
+        "attractions": [
+            "Burj Khalifa",
+            "Dubai Mall",
+            "Palm Jumeirah",
+            "Dubai Marina",
+            "Gold Souk"
+        ],
+        "costs": {
+            "accommodation": "$90-180 per night",
+            "food": "$35-55 per day",
+            "transport": "$20-35 per day"
+        }
+    },
+    {
+        "name": "London",
+        "country": "UK",
+        "continent": "Europe",
+        "image": "assets/image/destinations/london_image.jpg",
+        "description": "Rich in history and culture, London offers royal palaces, world class museums, theater, and multicultural dining.",
+        "attractions": [
+            "Big Ben",
+            "Tower of London",
+            "British Museum",
+            "London Eye",
+            "Buckingham Palace"
+        ],
+        "costs": {
+            "accommodation": "$110-220 per night",
+            "food": "$35-55 per day",
+            "transport": "$15-25 per day"
+        }
+    },
+    {
+        "name": "Bali",
+        "country": "Indonesia",
+        "continent": "Asia",
+        "image": "assets/image/destinations/bali_image.jpg",
+        "description": "A tropical paradise known for beautiful beaches, volcanic mountains, iconic rice paddies, and spiritual culture.",
+        "attractions": [
+            "Uluwatu Temple",
+            "Tegalalang Rice Terrace",
+            "Sacred Monkey Forest",
+            "Tanah Lot",
+            "Seminyak Beach"
+        ],
+        "costs": {
+            "accommodation": "$40-90 per night",
+            "food": "$15-30 per day",
+            "transport": "$10-20 per day"
+        }
+    },
+    {
+        "name": "Rome",
+        "country": "Italy",
+        "continent": "Europe",
+        "image": "assets/image/destinations/rome_image.jpg",
+        "description": "The Eternal City is filled with ancient ruins, Renaissance art, and some of the world's best cuisine.",
+        "attractions": [
+            "Colosseum",
+            "Vatican City",
+            "Trevi Fountain",
+            "Roman Forum",
+            "Pantheon"
+        ],
+        "costs": {
+            "accommodation": "$85-160 per night",
+            "food": "$30-50 per day",
+            "transport": "$12-22 per day"
+        }
+    },
+    {
+        "name": "Sydney",
+        "country": "Australia",
+        "continent": "Oceania",
+        "image": "assets/image/destinations/sydney_image.jpg",
+        "description": "Famous for its harbor, Opera House, and beaches. A vibrant city with outdoor lifestyle and diverse culture.",
+        "attractions": [
+            "Sydney Opera House",
+            "Harbour Bridge",
+            "Bondi Beach",
+            "Taronga Zoo",
+            "Royal Botanic Garden"
+        ],
+        "costs": {
+            "accommodation": "$100-190 per night",
+            "food": "$35-55 per day",
+            "transport": "$15-28 per day"
+        }
+    },
+    {
+        "name": "Nuwara Eliya",
+        "country": "Sri Lanka",
+        "continent": "Asia",
+        "image": "assets/image/destinations/nuwaraeliya_image.jpg",
+        "description": "A cool scenic hill city in Sri Lanka, famous for tea plantaions, misty mountains and colonial style buildings.",
+        "attractions": [
+            "Gregory Lake",
+            "Hakgala Botanical Garden",
+            "Pedro Tea Estate",
+            "Victoria Park",
+            "Lover's Leap Waterfall"
+        ],
+        "costs": {
+            "accommodation": "$30-70 per night",
+            "food": "$10-20 per day",
+            "transport": "$20-30 per day"
+        }
+    }
+]
+ 
