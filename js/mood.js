@@ -1,65 +1,94 @@
 // Travel Mood JavaScript - Ambient Sounds and Destination Tracking
 
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // // Hamburger Menu Toggle
-    // const hamburger = document.getElementById('hamburger');
-    // const navMenu = document.getElementById('navMenu');
 
-    // if (hamburger && navMenu) {
-    //     hamburger.addEventListener('click', function() {
-    //         navMenu.classList.toggle('active');
-    //     });
-    // }
+    // =============================================
+    // AMBIENT SOUNDS - Real Audio Play/Stop
+    // =============================================
 
-    // Ambient Sound Toggles - Simple Play/Pause
     const soundButtons = document.querySelectorAll('.sound-toggle');
-    let currentlyPlaying = null;
+    const volumeSlider = document.getElementById('volumeSlider');
+    const volumeValue = document.getElementById('volumeValue');
 
+    let currentAudio = null;
+    let currentlyPlaying = null;
+    let currentVolume = 0.7;
+
+    // Volume slider control
+    if (volumeSlider) {
+        volumeSlider.addEventListener('input', function() {
+            currentVolume = parseFloat(this.value);
+            volumeValue.textContent = Math.round(currentVolume * 100) + '%';
+            if (currentAudio) {
+                currentAudio.volume = currentVolume;
+            }
+        });
+    }
+
+    // Play / Stop buttons
     soundButtons.forEach(function(button) {
         button.addEventListener('click', function() {
             const soundType = this.getAttribute('data-sound');
 
-            // Stop all sounds first
+            // If same button clicked while playing — stop it
+            if (currentlyPlaying === soundType) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentAudio = null;
+                currentlyPlaying = null;
+                this.textContent = '▶ Play';
+                this.classList.remove('playing');
+                return;
+            }
+
+            // Stop any currently playing sound
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+
+            // Reset all buttons to Play
             soundButtons.forEach(function(btn) {
-                btn.textContent = 'Play';
+                btn.textContent = '▶ Play';
                 btn.classList.remove('playing');
             });
 
-            // Toggle current sound
-            if (currentlyPlaying === soundType) {
-                currentlyPlaying = null;
-                this.textContent = 'Play';
-            } else {
-                currentlyPlaying = soundType;
-                this.textContent = 'Stop';
-                this.classList.add('playing');
-                
-                // Show message (simulating sound play)
-                alert('Playing ' + soundType + ' sounds... (In real app, actual audio would play here)');
-            }
+            // Play the new sound
+            currentAudio = new Audio('assets/audio/' + soundType + '.mp3');
+            currentAudio.loop = true;
+            currentAudio.volume = currentVolume;
+            currentAudio.play().catch(function(error) {
+                console.error('Audio play failed:', error);
+                alert('Could not play audio. Make sure the file exists at assets/audio/' + soundType + '.mp3');
+            });
+
+            currentlyPlaying = soundType;
+            this.textContent = '■ Stop';
+            this.classList.add('playing');
         });
     });
 
-    // Destination Tracker Form
+    // =============================================
+    // DESTINATION TRACKER
+    // =============================================
+
     const destinationForm = document.getElementById('destinationForm');
 
     if (destinationForm) {
         destinationForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const name = document.getElementById('destinationName').value;
-            const country = document.getElementById('destinationCountry').value;
+            const name = document.getElementById('destinationName').value.trim();
+            const country = document.getElementById('destinationCountry').value.trim();
             const statusElement = document.querySelector('input[name="status"]:checked');
-            
+
             if (!statusElement) {
                 alert('Please select a status (Visited or Planned)');
                 return;
             }
-            
+
             const status = statusElement.value;
 
-            // Create destination object
             const destination = {
                 name: name,
                 country: country,
@@ -67,56 +96,54 @@ document.addEventListener('DOMContentLoaded', function() {
                 date: new Date().toLocaleDateString()
             };
 
-            // Save to localStorage
             let destinations = JSON.parse(localStorage.getItem('trackedDestinations')) || [];
             destinations.push(destination);
             localStorage.setItem('trackedDestinations', JSON.stringify(destinations));
 
-            // Reset form
             destinationForm.reset();
-
-            // Update display
             displayDestinations('all');
             updateStats();
 
-            // Show success message
-            alert('Destination added successfully!');
+            // Set "All" tab as active after adding
+            document.querySelectorAll('.tab-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            document.querySelector('[data-tab="all"]').classList.add('active');
         });
     }
 
-    // Tab Buttons
+    // =============================================
+    // TAB BUTTONS
+    // =============================================
+
     const tabButtons = document.querySelectorAll('.tab-btn');
 
     tabButtons.forEach(function(button) {
         button.addEventListener('click', function() {
-            // Remove active class from all buttons
             tabButtons.forEach(function(btn) {
                 btn.classList.remove('active');
             });
-
-            // Add active class to clicked button
             this.classList.add('active');
-
-            // Display filtered destinations
             const tab = this.getAttribute('data-tab');
             displayDestinations(tab);
         });
     });
 
-    // Display Destinations Function
+    // =============================================
+    // DISPLAY DESTINATIONS
+    // =============================================
+
     function displayDestinations(filter) {
         const destinationsList = document.getElementById('destinationsList');
         const destinations = JSON.parse(localStorage.getItem('trackedDestinations')) || [];
 
-        // Filter destinations
         let filtered = destinations;
         if (filter === 'visited') {
-            filtered = destinations.filter(d => d.status === 'visited');
+            filtered = destinations.filter(function(d) { return d.status === 'visited'; });
         } else if (filter === 'planned') {
-            filtered = destinations.filter(d => d.status === 'planned');
+            filtered = destinations.filter(function(d) { return d.status === 'planned'; });
         }
 
-        // Display
         if (filtered.length === 0) {
             destinationsList.innerHTML = '<p class="empty-state">No destinations in this category yet!</p>';
             return;
@@ -125,47 +152,54 @@ document.addEventListener('DOMContentLoaded', function() {
         destinationsList.innerHTML = '';
 
         filtered.forEach(function(dest, index) {
+            // Find real index in full array for deletion
+            const realIndex = destinations.indexOf(dest);
             const item = document.createElement('div');
             item.className = 'destination-item ' + dest.status;
             item.innerHTML = `
                 <div class="destination-info">
                     <h4>${dest.name}</h4>
-                    <p>${dest.country} • Added on ${dest.date}</p>
+                    <p>${dest.country} &bull; Added on ${dest.date}</p>
                 </div>
-                <span class="destination-status ${dest.status}">${dest.status}</span>
-                <button class="delete-btn" data-index="${index}">×</button>
+                <span class="destination-status ${dest.status}">${dest.status.charAt(0).toUpperCase() + dest.status.slice(1)}</span>
+                <button class="delete-btn" data-index="${realIndex}" title="Remove destination">&times;</button>
             `;
             destinationsList.appendChild(item);
         });
 
-        // Add delete functionality
+        // Delete buttons
         document.querySelectorAll('.delete-btn').forEach(function(btn) {
             btn.addEventListener('click', function() {
-                const index = this.getAttribute('data-index');
+                const index = parseInt(this.getAttribute('data-index'));
                 deleteDestination(index);
             });
         });
     }
 
-    // Delete Destination
+    // =============================================
+    // DELETE DESTINATION
+    // =============================================
+
     function deleteDestination(index) {
         let destinations = JSON.parse(localStorage.getItem('trackedDestinations')) || [];
         destinations.splice(index, 1);
         localStorage.setItem('trackedDestinations', JSON.stringify(destinations));
-        
-        // Refresh display
+
         const activeTab = document.querySelector('.tab-btn.active');
         const tab = activeTab ? activeTab.getAttribute('data-tab') : 'all';
         displayDestinations(tab);
         updateStats();
     }
 
-    // Update Statistics
+    // =============================================
+    // UPDATE STATISTICS
+    // =============================================
+
     function updateStats() {
         const destinations = JSON.parse(localStorage.getItem('trackedDestinations')) || [];
-        
-        const visitedCount = destinations.filter(d => d.status === 'visited').length;
-        const plannedCount = destinations.filter(d => d.status === 'planned').length;
+
+        const visitedCount = destinations.filter(function(d) { return d.status === 'visited'; }).length;
+        const plannedCount = destinations.filter(function(d) { return d.status === 'planned'; }).length;
         const totalCount = destinations.length;
 
         const visitedEl = document.getElementById('visitedCount');
@@ -177,7 +211,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (totalEl) totalEl.textContent = totalCount;
     }
 
-    // Load data on page load
+    // =============================================
+    // INITIAL LOAD
+    // =============================================
+
     displayDestinations('all');
     updateStats();
 });

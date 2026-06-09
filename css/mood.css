@@ -120,7 +120,37 @@ main {
 
 .section-description {
     color: var(--sage-green);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Volume Control */
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: var(--light-mint);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+}
+
+.volume-control label {
+    color: var(--deep-forest);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.volume-control input[type="range"] {
+    width: 150px;
+    cursor: pointer;
+    accent-color: var(--forest-green);
+}
+
+.volume-control #volumeValue {
+    color: var(--forest-green);
+    font-weight: bold;
+    min-width: 40px;
 }
 
 /* Sounds Grid */
@@ -165,15 +195,24 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
 }
 
 .sound-toggle:hover {
     background-color: var(--sage-green);
 }
 
+/* Playing state - pulsing animation */
 .sound-toggle.playing {
     background-color: var(--deep-forest);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
 /* Destination Tracker */
@@ -202,6 +241,13 @@ main {
 
 .form-group label {
     display: block;
+    margin-bottom: 0.5rem;
+    color: var(--deep-forest);
+    font-weight: bold;
+}
+
+/* Status label fix - using p instead of label */
+.status-label {
     margin-bottom: 0.5rem;
     color: var(--deep-forest);
     font-weight: bold;
@@ -503,49 +549,13 @@ footer {
         align-items: flex-start;
         gap: 1rem;
     }
-}
 
+    .volume-control {
+        width: 100%;
+        flex-wrap: wrap;
+    }
 
-
-
-/* ================================================== */
-
-/* Volume Control */
-.volume-control {
-    max-width: 400px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background-color: var(--light-mint);
-    border-radius: 10px;
-    text-align: center;
-}
-
-.volume-control label {
-    color: var(--deep-forest);
-    font-weight: bold;
-    margin-right: 1rem;
-}
-
-.volume-control input[type="range"] {
-    width: 200px;
-    margin: 0 1rem;
-    cursor: pointer;
-}
-
-.volume-control #volumeValue {
-    color: var(--forest-green);
-    font-weight: bold;
-    min-width: 50px;
-    display: inline-block;
-}
-
-/* Playing button animation */
-.sound-toggle.playing {
-    background-color: var(--deep-forest);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    .volume-control input[type="range"] {
+        width: 100%;
+    }
 }
